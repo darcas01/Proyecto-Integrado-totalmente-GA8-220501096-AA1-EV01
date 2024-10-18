@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <!-- Configuración de tiempo de sesión -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    <!-- Página de inicio o bienvenida -->
+    <welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
+    <!-- Mapeo del Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlets</servlet-name>
+        <servlet-class>com.darwuich.compensapp.login.Servlets.LoginServlets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlets</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <!-- Mapeo del Agendar Cita Servlet -->
+    <servlet>
+        <servlet-name>AgendarCitaServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.servlets.AgendarCitaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AgendarCitaServlet</servlet-name>
+        <url-pattern>/AgendarCitaServlet</url-pattern>
+    </servlet-mapping>
+    <!-- Mapeo del Modificar Cita Servlet -->
+    <servlet>
+        <servlet-name>ModificarCitaServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.modificarcita.servlets.ModificarCitaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModificarCitaServlet</servlet-name>
+        <url-pattern>/ModificarCitaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListarCitasServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.modificarcita.servlets.ListarCitasServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListarCitasServlet</servlet-name>
+        <url-pattern>/ListarCitasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CargarModificarCitaServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.servlets.CargarModificarCitaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CargarModificarCitaServlet</servlet-name>
+        <url-pattern>/CargarModificarCitaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListarCitasCancelarServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.cancelarcita.servlets.ListarCitasCancelarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListarCitasCancelarServlet</servlet-name>
+        <url-pattern>/ListarCitasCancelarServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CancelarCitaServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.cancelarcita.servlets.CancelarCitaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancelarCitaServlet</servlet-name>
+        <url-pattern>/CancelarCitaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ListarCitasHistorialServlet</servlet-name>
+        <servlet-class>com.darwuich.compensapp.historialcitas.ListarCitasHistorialServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListarCitasHistorialServlet</servlet-name>
+        <url-pattern>/ListarCitasHistorialServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>CerrarSesionServlet</servlet-name>
+    <servlet-class>com.darwuich.compensapp.cerrarsesion.servlets.CerrarSesionServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>CerrarSesionServlet</servlet-name>
+    <url-pattern>/CerrarSesionServlet</url-pattern>
+</servlet-mapping>
+    <!-- Otros servlets pueden ir aquí en el futuro -->
+</web-app>
